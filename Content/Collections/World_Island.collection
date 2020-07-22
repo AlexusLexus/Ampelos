@@ -6,6 +6,20 @@ Color:(R=0.000000,G=0.450952,B=0.728000,A=1.000000)
 
 /Game/World/Levels/Island.Island
 /Game/World/Levels/Island_BuiltData.Island_BuiltData
+/Game/World/Materials/2D/T_DeserSand_AO.T_DeserSand_AO
+/Game/World/Materials/2D/T_DeserSand_D.T_DeserSand_D
+/Game/World/Materials/2D/T_desert_sand_a_d.T_desert_sand_a_d
+/Game/World/Materials/2D/T_desert_sand_a_eresion_n.T_desert_sand_a_eresion_n
+/Game/World/Materials/2D/T_DesetSand_N.T_DesetSand_N
+/Game/World/Materials/2D/T_Ground_AO.T_Ground_AO
+/Game/World/Materials/2D/T_Ground_D.T_Ground_D
+/Game/World/Materials/2D/T_Ground_N.T_Ground_N
+/Game/World/Materials/2D/T_Island_Grass.T_Island_Grass
+/Game/World/Materials/2D/T_sand_c_h.T_sand_c_h
+/Game/World/Materials/2D/T_Snow_Albedo.T_Snow_Albedo
+/Game/World/Materials/2D/T_Snow_Normal.T_Snow_Normal
+/Game/World/Materials/2D/T_Snow_Roughness.T_Snow_Roughness
+/Game/World/Materials/2D/water_normal.water_normal
 /Game/World/Materials/LandscapeMaterial_Island.LandscapeMaterial_Island
 /Game/World/Materials/Water.Water
 /Game/World/Materials/Water_Inst.Water_Inst
