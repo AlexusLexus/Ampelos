@@ -6,3 +6,6 @@ Color:(R=0.000000,G=0.450952,B=0.728000,A=1.000000)
 
 /Game/World/Levels/Island.Island
 /Game/World/Levels/Island_BuiltData.Island_BuiltData
+/Game/World/Materials/LandscapeMaterial_Island.LandscapeMaterial_Island
+/Game/World/Materials/Water.Water
+/Game/World/Materials/Water_Inst.Water_Inst
