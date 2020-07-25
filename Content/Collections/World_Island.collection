@@ -4,6 +4,8 @@ Guid:DB12500A-4E9F-65B8-AE15-3CAE01E7814B
 ParentGuid:00000000-0000-0000-0000-000000000000
 Color:(R=0.000000,G=0.450952,B=0.728000,A=1.000000)
 
+/Game/UI/cdimages/M_RadialProgressBar_World.M_RadialProgressBar_World
+/Game/UI/cdimages/M_RadialProgressBar_World_Inst.M_RadialProgressBar_World_Inst
 /Game/World/Levels/Island.Island
 /Game/World/Levels/Island_BuiltData.Island_BuiltData
 /Game/World/Materials/2D/T_DeserSand_AO.T_DeserSand_AO
