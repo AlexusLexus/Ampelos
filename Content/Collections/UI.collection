@@ -5,4 +5,6 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 Color:(R=1.000000,G=1.000000,B=1.000000,A=1.000000)
 
 /Game/UI/cdimages/Crosshair.Crosshair
+/Game/UI/cdimages/M_RadialProgressBar.M_RadialProgressBar
+/Game/UI/cdimages/M_RadialProgressBar_Inst.M_RadialProgressBar_Inst
 /Game/UI/UI.UI
