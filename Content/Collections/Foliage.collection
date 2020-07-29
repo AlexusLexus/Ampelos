@@ -5,3 +5,5 @@ ParentGuid:00000000-0000-0000-0000-000000000000
 Color:(R=0.113936,G=1.000000,B=0.000000,A=1.000000)
 
 /Game/Geometry/Props/Area_Desert/Foliage_Desert_Small_Rock_01.Foliage_Desert_Small_Rock_01
+/Game/World/Levels/FirstPersonExampleMap.FirstPersonExampleMap
+/Game/World/Levels/FirstPersonExampleMap_BuiltData.FirstPersonExampleMap_BuiltData
