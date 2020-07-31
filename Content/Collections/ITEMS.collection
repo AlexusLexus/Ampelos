@@ -4,6 +4,10 @@ Guid:322616B9-44C2-D4B7-B68B-43B4BD0EF199
 ParentGuid:00000000-0000-0000-0000-000000000000
 Color:(R=0.000000,G=0.728000,B=0.283366,A=1.000000)
 
+/Game/ITEMS/Quests/MQ01.MQ01
+/Game/ITEMS/Quests/MQ02.MQ02
+/Game/ITEMS/Quests/Quest_Test.Quest_Test
+/Game/ITEMS/Quests/Quests_Test_2.Quests_Test_2
 /Game/ITEMS/Test/EmptyBucket.EmptyBucket
 /Game/ITEMS/Test/Test.Test
 /Game/ITEMS/WorldItem.WorldItem
