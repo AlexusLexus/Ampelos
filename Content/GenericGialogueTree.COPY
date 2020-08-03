@@ -1,0 +1,6 @@
+Begin Object Class=/Game/Data/DataAssets/AmpelosDialogueTree.AmpelosDialogueTree_C Name="GenericGialogueTree"
+   Dilaog Tree ID="GenericDialogueTree"
+   Topics(0)=(TopicID_30_1A84DD854653231B0DE292937838DFF3="zzzGenericDialogueTree",TopicDisplayName_22_DF63D1714D2ED6DD4189BAB217F04300=NSLOCTEXT("[45403055487831ED9BEC3D821CDFD209]", "8F1A2AAE4D9EF4C771B1F898A1E3375E", "HELLO, I HAVE NO GREETING!"),Conditiontoappear_2_CBE1B2954E6F450336F9E690D3F71313=(TagDictionary=((TagName="Condition.AlwaysAvailable")),QueryTokenStream=(0,1,2,1,0),AutoDescription=" ALL( Condition.AlwaysAvailable )"),TopicGUID_12_0B2FF7784A1EAB35905004BD6A306551=1E25CE8A424502E92290D2A5515A404B,Conversations_23_77D354194D0E216DDD21DB87A54590F2=((DialogID_16_0F8CA9474D6C9883157335849F2F002E="xxxDialogueGenericNoGreeting",DoalogueName_13_914F3E6943F01D094F775FA90DD2B04F=NSLOCTEXT("[45403055487831ED9BEC3D821CDFD209]", "FA8AFF3E414311B8743347AED4512BDB", "No greeting"),Conversation_4_72FD916D461A1C5ABE37068D530DE834=AmpelosConversation_C'"/Game/Data/Conversations/GenericConversation.GenericConversation"',EndConversationwithNPCOnEnd_10_3AB119D54D835A375DC698B88076CDE0=True)))
+   Dialog Tree GUID=ACEE760644DEA5174FEB37A95F088718
+   NativeClass=BlueprintGeneratedClass'"/Game/Data/DataAssets/AmpelosDialogueTree.AmpelosDialogueTree_C"'
+End Object

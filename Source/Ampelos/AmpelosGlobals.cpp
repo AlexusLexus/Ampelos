@@ -25,3 +25,42 @@ void AAmpelosGlobals::Tick(float DeltaTime)
 
 }
 
+FString AAmpelosGlobals::FileToString(FString Path, FString Folders, FString FileName)
+{
+
+	FString result;
+	FString directory = Path + "/" + Folders;
+	IFileManager& file = IFileManager::Get();
+
+	if (file.DirectoryExists(*directory))
+	{
+		FString myFile = directory + "/" + FileName;
+		FFileHelper::LoadFileToString(result, *myFile);
+	}
+
+	return result;
+
+}
+
+bool AAmpelosGlobals::StringToFile(FString Path, FString Folders, FString FileName, FString Data)
+{
+
+	FString fullPath = Path + "/" + Folders + "/" + FileName;
+
+	return FFileHelper::SaveStringToFile(Data, *fullPath);
+
+}
+
+FString AAmpelosGlobals::FetchData(FString Path, FString Folders, FString FileName, FString Data, FString EncryptionKey)
+{
+
+	FString tempstring = Data;
+	int Lenght = tempstring.Len();
+
+	for (int i = 0; i < Lenght; i++) {
+		tempstring[i] = Data[i] ^ EncryptionKey[i % ((sizeof(EncryptionKey) / sizeof(FString) + sizeof(Data)))];
+	}
+
+	return tempstring;
+
+}
