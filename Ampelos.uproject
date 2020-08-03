@@ -9,8 +9,27 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"Engine"
+				"Engine",
+				"GameplayAbilities"
 			]
 		}
+	],
+	"Plugins": [
+		{
+			"Name": "Landmass",
+			"Enabled": true
+		},
+		{
+			"Name": "VaRest",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/e47be161e7a24e928560290abd5dcc4f"
+		}
+	],
+	"TargetPlatforms": [
+		"AllDesktop",
+		"LinuxNoEditor",
+		"LinuxAArch64NoEditor",
+		"WindowsNoEditor",
+		"WindowsNoEditorWin32"
 	]
 }
