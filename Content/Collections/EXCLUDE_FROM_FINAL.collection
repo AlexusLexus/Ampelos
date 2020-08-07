@@ -2,7 +2,7 @@ FileVersion:2
 Type:Static
 Guid:8BD4B390-4C9B-C3A6-E0A5-6695A7C29500
 ParentGuid:00000000-0000-0000-0000-000000000000
-Color:(R=0.000000,G=0.728000,B=0.625972,A=1.000000)
+Color:(R=1.000000,G=0.018015,B=0.000000,A=1.000000)
 
 /Game/World/Levels/FirstPersonExampleMap.FirstPersonExampleMap
 /Game/World/Levels/FirstPersonExampleMap_BuiltData.FirstPersonExampleMap_BuiltData
