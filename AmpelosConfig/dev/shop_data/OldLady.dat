@@ -1,0 +1,3 @@
+#--A		 B    C	   D
+#--Item Explicit Name Cost Max Count bCanBeReplanishted (bool)
+Item:EmptyBacket 10 1 false,

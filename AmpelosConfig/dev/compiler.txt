@@ -1,0 +1,2 @@
+dev/geotrackerfiles~~GeotackerList.txt,
+dev/shop_data~~ShoppingList.txt

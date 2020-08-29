@@ -2,6 +2,8 @@ Binaries
 DerivedDataCache
 Intermediate
 Saved
+!Ampelos-Docs
+AmpelosBuilds
 .vscode
 .vs
 *.VC.db
