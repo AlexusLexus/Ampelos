@@ -10,7 +10,8 @@
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
 				"Engine",
-				"GameplayAbilities"
+				"GameplayAbilities",
+				"GPC_Tools"
 			]
 		}
 	],
@@ -27,6 +28,16 @@
 		{
 			"Name": "Iliad",
 			"Enabled": false
+		},
+		{
+			"Name": "EasyMultiSave",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/7232621c23174bbbbb64c7bfb6583f6f"
+		},
+		{
+			"Name": "SurfaceFootstepSystem",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/d605a2cceb8546b39accf458c022b0df"
 		}
 	],
 	"TargetPlatforms": [

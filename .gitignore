@@ -3,6 +3,7 @@ DerivedDataCache
 Intermediate
 Saved
 !Ampelos-Docs
+!Ampelos-Docs/xRef
 AmpelosBuilds
 .vscode
 .vs
@@ -14,3 +15,5 @@ AmpelosBuilds
 *.suo
 *.xcodeproj
 *.xcworkspace
+!Ampelos-Docs/xRef/Spring+Forest+Pack+1.zip
+!Ampelos-Docs/xRef/Spring+Forest+Pack+1.zip
