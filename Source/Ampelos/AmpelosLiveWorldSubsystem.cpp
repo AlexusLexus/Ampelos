@@ -119,3 +119,21 @@ bool UAmpelosLiveWorldSubsystem::TestDataAssetForLocationByGlobalName(UAmpelosLi
 }
 */
 
+//void UAmpelosLiveWorldSubsystem::SwapLocation(UAmpelosLiveWorldLocationData* WorldData, FGuid NewTargetGUID, FName OldLocationName)
+//{
+//
+//	TArray<AActor*> ListOfLocations;
+//	TSubclassOf<AAmpelosLiveWorldLocation> ClassOfLocation = AAmpelosLiveWorldLocation::StaticClass();
+//
+//	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ClassOfLocation, ListOfLocations);
+//
+//	int i;
+//
+//	for (i; i < ListOfLocations.Num(); i++)
+//	{
+//		ListOfLocations[i]
+//	}
+//
+//
+//}
+

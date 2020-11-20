@@ -9,6 +9,7 @@
 #include "AmpelosLiveWorldLocationData.h"
 #include "AmpelosLiveWorldLocation.h"
 #include "Engine/World.h"
+#include "Kismet/GameplayStatics.h"
 
 #include "AmpelosLiveWorldSubsystem.generated.h"
 
@@ -82,6 +83,9 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "AMPELOS|LIVE WORLD")
 		bool TestDataAssetForLocationByGUID(UAmpelosLiveWorldLocationData* WorldData, FGuid TargetGUID);
+
+	//UFUNCTION(BlueprintType, Category = "AMPELOS|LIVE WORLD")
+	//	void SwapLocation(UAmpelosLiveWorldLocationData* WorldData, FGuid NewTargetGUID, FName OldLocationName);
 
 	/*
 	UFUNCTION(BlueprintPure, Category = "AMPELOS|LIVE WORLD")

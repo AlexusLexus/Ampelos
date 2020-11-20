@@ -1,5 +1,0 @@
-// yes
-
-
-#include "hawkheaven.h"
-

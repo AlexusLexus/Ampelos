@@ -4,9 +4,33 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
 #include <Runtime\Core\Public\Misc\Paths.h>
 #include <Runtime\Core\Public\HAL\PlatformFilemanager.h>
+#include "AmpelosItemDefinition.h"
+#include "GameplayTagContainer.h"
+
 #include "AmpelosGlobals.generated.h"
+
+//Use this macro if you're lazy and don't want to write this shit too many times
+#define STRUCT_PROPERTY UPROPERTY(EditAnywhere, BlueprintReadWrite)
+
+
+UENUM(BlueprintType)
+enum class EAmpelosCustomPartType : uint8
+{
+	CPT_Head UMETA(DisplayName = "Head"),
+	CPT_Body UMETA(DisplayName = "Body"),
+	CPT_Vest UMETA(DisplayName = "Vest"),
+	CPT_Hair UMETA(DisplayName = "Hair"),
+	CPT_Mask UMETA(DisplayName = "Mask"),
+	CPT_Hat UMETA(DisplayName = "Hat"),
+	CPT_Backpack UMETA(DisplayName = "Backpack"),
+	CPT_Acc_01 UMETA(DisplayName = "Acc 01"),
+	CPT_Acc_02 UMETA(DisplayName = "Acc 02"),
+	CPT_Acc_03 UMETA(DisplayName = "Acc 03")
+};
+
 
 UENUM(BlueprintType)
 enum EAmpelosBuildType
@@ -43,6 +67,42 @@ struct FAmpelosGeoTrecker
 
 };
 
+USTRUCT(BlueprintType)
+struct FAmpelosSubSlotDefinition
+{
+
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UAmpelosItemDefinition* ItemDef;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int Quantity;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FGameplayTagContainer SubSlotTags;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int SubSlotLinkedToSlot;
+
+};
+
+USTRUCT(BlueprintType)
+struct FAmpelosSlotDefinition
+{
+
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UAmpelosItemDefinition* ItemDefinition;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int Amount;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TArray<FAmpelosSubSlotDefinition> Subslots;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FGameplayTagContainer SlotTags;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int SlotLinkedToSlot;
+
+};
+
 UCLASS(Config = Game)
 class AMPELOS_API AAmpelosGlobals : public AActor
 {
@@ -52,41 +112,44 @@ public:
 	// Sets default values for this actor's properties
 	AAmpelosGlobals();
 
+	//UFUNCTION(BlueprintCallable, Category = "AMPELOS|Inventory V2")
+	//void FindItemsInInventory(TArray<FAmpelosSlotDefinition> InventoryArr, UAmpelosItemDefinition* ItemToSearch, bool& bFound, int& FoundIndex);
+
 	/*
-
-		Use this function to convert file to FString
-
-		@param Path - Path to file (use GetProjectDir() to fill this)
-		@param Fodlers - Folder path that will be added to 'Path' (example - LiveAnim/Config) and don't add '/' at the end
-		@param FileName - Name of the file
-
+	 *
+	 *	Use this function to convert file to FString
+	 *
+	 *	@param Path - Path to file (use GetProjectDir() to fill this)
+	 *	@param Fodlers - Folder path that will be added to 'Path' (example - LiveAnim/Config) and don't add '/' at the end
+	 *	@param FileName - Name of the file
+	 *
 	*/
 	UFUNCTION(BlueprintCallable, Category = "AMPELOS|File I/O", meta = (Keywords = "file write overwrite vlad", DisplayName = "File To String"))
 		static FString FileToString(FString Path, FString Folders, FString FileName);
 
 	/*
-
-		Use this function to confert FString to file
-
-		@param Path - Path to file (use GetProjectDir() to fill this)
-		@param Fodlers - Folder path that will be added to 'Path' (example - LiveAnim/Config) and don't add '/' at the end
-		@param FileName - Name of the file
-		@param Data - strinf that will be saved
-
+	 *
+	 *	Use this function to confert FString to file
+	 *
+	 *	@param Path - Path to file (use GetProjectDir() to fill this)
+	 *	@param Fodlers - Folder path that will be added to 'Path' (example - LiveAnim/Config) and don't add '/' at the end
+	 *	@param FileName - Name of the file
+	 *	@param Data - strinf that will be saved
+	 *
 	*/
 	UFUNCTION(BlueprintCallable, Category = "AMPELOS|File I/O", meta = (Keywords = "file read convert vlad", DisplayName = "String To File"))
 		static bool StringToFile(FString Path, FString Folders, FString FileName, FString Data);
 
 	/*
-
-		Use this function to encrypt or decrypt FString
-
-		@param Path - Path to file (use GetProjectDir() to fill this)
-		@param Fodlers - Folder path that will be added to 'Path' (example - LiveAnim/Config) and don't add '/' at the end
-		@param FileName - Name of the file
-		@param Data - strinf that will be saved
-		@param EncryptionKey - Encryption key that will be used to encrypt/decrypt data
-
+	 *
+	 *	Use this function to encrypt or decrypt FString
+     *
+	 *	@param Path - Path to file (use GetProjectDir() to fill this)
+	 *	@param Fodlers - Folder path that will be added to 'Path' (example - LiveAnim/Config) and don't add '/' at the end
+	 *	@param FileName - Name of the file
+	 *	@param Data - strinf that will be saved
+	 *	@param EncryptionKey - Encryption key that will be used to encrypt/decrypt data
+	 *
 	*/
 	UFUNCTION(BlueprintCallable, Category = "AMPELOS|File I/O", meta = (Keywords = "file encryption XOR vlad", DisplayName = "Fetch Data"))
 		static FString FetchData(FString Path, FString Folders, FString FileName, FString Data, FString EncryptionKey);

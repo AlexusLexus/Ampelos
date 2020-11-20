@@ -9,6 +9,11 @@ AQuest::AQuest()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
+	if (ObjectiveSet != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 0.f, FColor::Red, TEXT("Quest script '%s' : objective set is NULL!"), *QuestUniqueName);
+	}
+
 }
 
 //I'll left it here for good
@@ -49,6 +54,27 @@ void AQuest::FailQuest()
 void AQuest::SetStage(int TargetStage)
 {
 	Stage = TargetStage;
+	//UE_LOG(AmpelosQuestGen, Display, TEXT("Quest '%s' SetStage() to stage %n"), *QuestUniqueName, Stage);
+}
+
+void AQuest::CallUpdate()
+{
+
+	QuestUpdate();
+
+}
+
+UQuestObjective* AQuest::GetCurrentObjective()
+{
+	if (ObjectiveSet != NULL)
+	{
+		if (ObjectiveSet->ObjectivesSet.Contains(Stage))
+		{
+			return ObjectiveSet->ObjectivesSet[Stage].QuestObjective;
+		}
+	}
+
+	return nullptr;
 }
 
 // Called when the game starts or when spawned

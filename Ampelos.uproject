@@ -10,7 +10,24 @@
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
 				"Engine",
-				"GameplayAbilities"
+				"CoreUObject"
+			]
+		},
+		{
+			"Name": "AmpelosGameEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"CoreUObject",
+				"UnrealEd"
+			]
+		},
+		{
+			"Name": "AmpelosK2Nodes",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"BlueprintGraph"
 			]
 		}
 	],
@@ -21,7 +38,7 @@
 		},
 		{
 			"Name": "VaRest",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/e47be161e7a24e928560290abd5dcc4f"
 		},
 		{

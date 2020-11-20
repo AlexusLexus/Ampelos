@@ -8,7 +8,6 @@
 #include "Quest.h"
 #include "GameplayTagContainer.h"
 #include "Misc/Guid.h"
-#include "Blueprint/UserWidget.h"
 
 #include "AmpelosPlaylist.generated.h"
 

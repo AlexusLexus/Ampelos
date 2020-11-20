@@ -25,6 +25,31 @@ void AAmpelosGlobals::Tick(float DeltaTime)
 
 }
 
+//void AAmpelosGlobals::FindItemsInInventory(TArray<FAmpelosSlotDefinition> InventoryArr, UAmpelosItemDefinition * ItemToSearch, bool & bFound, int & FoundIndex)
+//{
+//	int i;
+//
+//	for (i = 0; i < InventoryArr.Num(); i++)
+//	{
+//		if (InventoryArr[i].ItemDefinition->ItemID == ItemToSearch->ItemID)
+//		{
+//			bFound = true;
+//			FoundIndex = i;
+//			return;
+//		}
+//	}
+//
+//	if (bFound == false)
+//	{
+//		bFound = false;
+//		FoundIndex = -1;
+//		return;
+//	}
+//
+//	return;
+//
+//}
+
 FString AAmpelosGlobals::FileToString(FString Path, FString Folders, FString FileName)
 {
 
